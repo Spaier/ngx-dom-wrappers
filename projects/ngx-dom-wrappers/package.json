@@ -1,0 +1,26 @@
+{
+  "name": "ngx-dom-wrappers",
+  "description": "library providing dom wrappers in angular",
+  "version": "0.0.1",
+  "license": "MIT",
+  "readme": "README.md",
+  "author": {
+    "email": "SpaierInstinct@gmail.com",
+    "name": "Pavel Levchuk",
+    "url": "https://github.com/Spaier"
+  },
+  "homepage": "https://github.com/Spaier/ngx-dom-wrappers",
+  "bugs": "https://github.com/Spaier/ngx-dom-wrappers/issues",
+  "repository": {
+    "url": "https://github.com/Spaier/ngx-dom-wrappers",
+    "type": "git"
+  },
+  "keywords": [
+    "angular",
+    "dom",
+    "wrappers"
+  ],
+  "peerDependencies": {
+    "@angular/core": "^6.0.0"
+  }
+}
