@@ -4,9 +4,9 @@ import { SESSION_STORAGE } from './tokens/session-storage.token'
 import { LOCAL_STORAGE } from './tokens/local-storage.token'
 import { WINDOW } from './tokens/window.token'
 
-export function getLocalStorage() { return typeof localStorage !== 'undefined' ? localStorage : null }
-export function getSessionStorage() { return typeof sessionStorage !== 'undefined' ? sessionStorage : null }
-export function getWindow() { return typeof window !== 'undefined' ? window : null }
+export function getLocalStorage(): Storage { return typeof localStorage !== 'undefined' ? localStorage : null }
+export function getSessionStorage(): Storage { return typeof sessionStorage !== 'undefined' ? sessionStorage : null }
+export function getWindow(): Window { return typeof window !== 'undefined' ? window : null }
 
 @NgModule({
   providers: [
