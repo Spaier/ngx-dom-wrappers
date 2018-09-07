@@ -29,6 +29,7 @@
       "error",
       "windows"
     ],
+    "no-unused-vars": "warn",
     "quotes": [
       "error",
       "single"
@@ -36,7 +37,6 @@
     "semi": [
       "error",
       "never"
-    ],
-    "no-unused-vars": "warn"
+    ]
   }
 }
