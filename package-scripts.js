@@ -6,7 +6,7 @@ module.exports = {
       default: 'compodoc -p tsconfig.json -d docs',
       serve: 'compodoc -s'
     },
-    build: 'ng build',
+    build: 'ng build && gulp',
     test: {
       default: 'ng test',
       ci: 'ng test -c ci'
