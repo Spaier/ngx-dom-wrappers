@@ -8,6 +8,9 @@ export function getLocalStorage(): Storage { return typeof localStorage !== 'und
 export function getSessionStorage(): Storage { return typeof sessionStorage !== 'undefined' ? sessionStorage : null }
 export function getWindow(): Window { return typeof window !== 'undefined' ? window : null }
 
+/**
+ * Provides dom wrappers via defined factory functions.
+ */
 @NgModule({
   providers: [
     { provide: LOCAL_STORAGE, useFactory: getLocalStorage },
