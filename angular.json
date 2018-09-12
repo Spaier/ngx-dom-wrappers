@@ -29,13 +29,14 @@
           "options": {
             "main": "projects/ngx-dom-wrappers/src/test.ts",
             "tsConfig": "projects/ngx-dom-wrappers/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-dom-wrappers/karma.conf.js"
+            "karmaConfig": "karma.conf.js"
           },
           "configurations": {
             "ci": {
               "codeCoverage": true,
-              "karmaConfig": "projects/ngx-dom-wrappers/karma.conf.ci.js",
-              "progress": false
+              "progress": false,
+              "browsers": "ChromeHeadlessCI",
+              "watch": false
             }
           }
         },
