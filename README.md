@@ -92,6 +92,7 @@ constructor(
 
 ## Resources
 
+* Docs: <https://spaier.github.io/ngx-dom-wrappers>
 * CoreModule: <https://angular.io/guide/styleguide#core-feature-module>
 
 ## License
