@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/ngx-dom-wrappers.svg)](https://www.npmjs.com/package/ngx-dom-wrappers)
 [![npm](https://img.shields.io/npm/l/ngx-dom-wrappers.svg)](https://www.npmjs.com/package/ngx-dom-wrappers)
+[![Build Status](https://travis-ci.com/Spaier/ngx-dom-wrappers.svg?branch=master)](https://travis-ci.com/Spaier/ngx-dom-wrappers)
 
 ## Prerequisites
 
