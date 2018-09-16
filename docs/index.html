@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-dom-wrappers documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">ngx-dom-wrappers documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ngx-dom-wrappers">ngx-dom-wrappers</h1>
+<p><a href="https://www.npmjs.com/package/ngx-dom-wrappers"><img src="https://img.shields.io/npm/v/ngx-dom-wrappers.svg" alt="npm" class="img-responsive"></a>
+<a href="https://www.npmjs.com/package/ngx-dom-wrappers"><img src="https://img.shields.io/npm/l/ngx-dom-wrappers.svg" alt="npm" class="img-responsive"></a>
+<a href="https://travis-ci.com/Spaier/ngx-dom-wrappers"><img src="https://travis-ci.com/Spaier/ngx-dom-wrappers.svg?branch=master" alt="Build Status" class="img-responsive"></a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Node</li>
+<li>npm or yarn.</li>
+</ul>
+<h2 id="about">About</h2>
+<p>Angular library providing wrappers for dom types.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<div><pre class="line-numbers"><code class="language-bash">npm install ngx-dom-wrappers</code></pre></div><p>or</p>
+<div><pre class="line-numbers"><code class="language-bash">yarn add ngx-dom-wrappers</code></pre></div><h2 id="usage">Usage</h2>
+<ol>
+<li>Import <code>DomWrappersModule</code> in <code>AppModule</code> or <code>CoreModule</code> of your application.</li>
+</ol>
+<p>AppModule</p>
+<div><pre class="line-numbers"><code class="language-ts">
+&#64;NgModule({
+  imports: [
+    // Other imports
+    DomWrappersModule
+    // Other imports
+  ],
+})
+export class AppModule { }
+</code></pre></div><p>CoreModule</p>
+<div><pre class="line-numbers"><code class="language-ts">
+&#64;NgModule({
+  imports: [
+    // Other imports
+    DomWrappersModule
+    // Other imports
+  ],
+  exports: [
+    // Other exports
+    DomWrappersModule
+    // Other exports
+  ],
+})
+export class CoreModule { }
+</code></pre></div><ol start="2">
+<li>Use wrappers in your code </li>
+</ol>
+<div><pre class="line-numbers"><code class="language-ts">
+import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from &#39;ngx-dom-wrappers&#39;
+
+constructor(
+    &#64;Inject(WINDOW) windowWrapper,
+    &#64;Inject(LOCAL_STORAGE) localStorageWrapper,
+    &#64;Inject(SESSION_STORAGE) sessionStorageWrapper,
+  ) {
+    const windowObject = windowWrapper as Window
+    if (windowObject) {
+    // Your code
+  }
+}
+</code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li>CoreModule: <a href="https://angular.io/guide/styleguide#core-feature-module">https://angular.io/guide/styleguide#core-feature-module</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>MIT</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <script src="./js/menu-wc.js"></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
