@@ -13,7 +13,7 @@ module.exports = {
     },
     build: {
       default: 'ng build && gulp',
-      ci: 'ng build sample && ng build sample --prod && ng build && gulp'
+      ci: 'ng build sample --prod && ng build && gulp'
     },
     test: {
       default: 'ng test',
@@ -22,7 +22,7 @@ module.exports = {
     },
     e2e: {
       default: 'ng e2e',
-      ci: 'ng e2e -c ci && ng e2e -c ci-prod'
+      ci: 'ng e2e -c ci-prod'
     },
     ci: 'nps lint.all && nps build.ci && nps test.ci && nps e2e.ci'
   }
