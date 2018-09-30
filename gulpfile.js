@@ -7,7 +7,7 @@ function copyFiles(done) {
   // let root = 'dist/ngx-dom-wrappers'
   let output = 'dist/ngx-dom-wrappers'
   pump([
-    gulp.src(['README.md', 'LICENSE']),
+    gulp.src(['README.md', 'CHANGELOG.md', 'LICENSE']),
     gulp.dest(output)
   ], done())
 }
