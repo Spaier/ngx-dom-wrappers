@@ -78,9 +78,9 @@ export class CoreModule { }
 import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from 'ngx-dom-wrappers'
 
 constructor(
-    @Inject(WINDOW) windowWrapper: Window,
-    @Inject(LOCAL_STORAGE) localStorageWrapper: Storage,
-    @Inject(SESSION_STORAGE) sessionStorageWrapper: Storage,
+    @Inject(WINDOW) windowWrapper?: Window,
+    @Inject(LOCAL_STORAGE) localStorageWrapper?: Storage,
+    @Inject(SESSION_STORAGE) sessionStorageWrapper?: Storage,
   ) {
   // Your code
 }
@@ -93,9 +93,9 @@ With `strictMetadataEmit` and no `@dynamic`
 import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from 'ngx-dom-wrappers'
 
 constructor(
-    @Inject(WINDOW) windowWrapper,
-    @Inject(LOCAL_STORAGE) localStorageWrapper,
-    @Inject(SESSION_STORAGE) sessionStorageWrapper,
+    @Inject(WINDOW) windowWrapper?,
+    @Inject(LOCAL_STORAGE) localStorageWrapper?,
+    @Inject(SESSION_STORAGE) sessionStorageWrapper?,
   ) {
 	const windowObject = windowWrapper as Window
 	if (windowObject) {
