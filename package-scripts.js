@@ -13,7 +13,8 @@ module.exports = {
     },
     build: {
       default: 'ng build && gulp',
-      ci: 'ng build sample --prod && ng build && gulp'
+      sample: 'ng build sample --prod',
+      ci: 'nps build && nps build.sample'
     },
     test: {
       default: 'ng test',
