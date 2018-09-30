@@ -4,15 +4,25 @@ dist: trusty
 addons:
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
+    - google-chrome-stable
 node_js:
-- '10.11.0'
+- 10.11.0
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.10.1
-  - export PATH="$HOME/.yarn/bin:$PATH"
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.10.1
+- export PATH="$HOME/.yarn/bin:$PATH"
 install:
-  - yarn
+- yarn
 script:
-  - yarn nps build
+- yarn nps ci
+before_deploy:
+- cd dist/ngx-dom-wrappers
+deploy:
+  provider: npm
+  email: SpaierInstinct@gmail.com
+  api_key:
+    secure: fkgbrowiYVzccRSlDkFn2JToBFK2K3SctrzK/u5CHmpK3jYy02Y3w21nPE0/2c5tla7U1jndDWQ6d1WSw+HSayd9s3qbi/SHsfInjZSMHA6EuaCGUQifCbpPsQXOTMWRGyWtWxjdJt+kxqAaCYyxiyyOowFrGePd/uM3oaNFe5O1aqHhBBHt5cBr1az5c2E/iSzbuIHaZUdWNeiFKDy6u+PZtJXsCh94D9DHuTH/JNmTrNFCbf1D+N+0/KMs2e78vGj6ZsOGFvkdnL7QEElYVL4dyEwruyJWxpAXM6lUZuj00Oa7NZXbv3dqdMnsZtUb5LXTxsh0VRsuKbvQMedh2VzvLa4jeG94d8AVI+bZe0zL80Y4Fq3jqsP68yipcct/NQfYVQUkaSYi6gyROYQ8jIcy/v5KdiL5asTyoKyva7JGbUBd1M5Q1nK68LegZBQ+kZYLk7uPzRLoSoX7VkkF+EODMAiUriAp3L1Y5IWmF0FETeDfabY+CiGGKgTn4FuWfj6QYIADiaUUadw2x5z+1Mr+t6W0SXKM3ZCDCgUNiIrRVU0QWJBuT8Pv27xKmKju272dBa9D9aX4j35V7jrm65bDZVNJncHHIbfLq8oXdczjOq/s3bShx1fsJy6/iIoBgCtArVYOghuBw8q9ZPV48ItzWp/DWpmOuYC5Qc8P8hs=
+  on:
+    branch: master
+    tags: true
