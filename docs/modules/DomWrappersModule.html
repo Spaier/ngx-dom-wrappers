@@ -84,9 +84,9 @@ import { SESSION_STORAGE } from &#x27;./tokens/session-storage.token&#x27;
 import { LOCAL_STORAGE } from &#x27;./tokens/local-storage.token&#x27;
 import { WINDOW } from &#x27;./tokens/window.token&#x27;
 
-export function getLocalStorage(): Storage { return typeof localStorage !&#x3D;&#x3D; &#x27;undefined&#x27; ? localStorage : null }
-export function getSessionStorage(): Storage { return typeof sessionStorage !&#x3D;&#x3D; &#x27;undefined&#x27; ? sessionStorage : null }
-export function getWindow(): Window { return typeof window !&#x3D;&#x3D; &#x27;undefined&#x27; ? window : null }
+export function getLocalStorage(): Storage | undefined { return typeof localStorage !&#x3D;&#x3D; &#x27;undefined&#x27; ? localStorage : undefined }
+export function getSessionStorage(): Storage | undefined { return typeof sessionStorage !&#x3D;&#x3D; &#x27;undefined&#x27; ? sessionStorage : undefined }
+export function getWindow(): Window | undefined { return typeof window !&#x3D;&#x3D; &#x27;undefined&#x27; ? window : undefined }
 
 /**
  * Provides dom wrappers via defined factory functions.
@@ -103,7 +103,7 @@ export class DomWrappersModule {
    * Prevents module from being imported twice.
    * @param parentModule Another instance of this module.
    */
-  constructor(@Optional() @SkipSelf() parentModule: DomWrappersModule) {
+  constructor(@Optional() @SkipSelf() parentModule: DomWrappersModule | null) {
     if (parentModule) {
       throw new Error(
         &#x27;DomWrappersModule is already loaded. Import it only in the AppModule or CoreModule.&#x27;)
