@@ -1,7 +1,7 @@
 {
   "name": "ngx-dom-wrappers",
-  "description": "library providing dom wrappers in angular",
-  "version": "0.0.1",
+  "description": "An Angular module with DOM types' Injection tokens and factories.",
+  "version": "0.0.2",
   "license": "MIT",
   "readme": "README.md",
   "author": {
