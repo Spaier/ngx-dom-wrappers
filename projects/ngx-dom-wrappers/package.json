@@ -16,6 +16,8 @@
     "type": "git"
   },
   "keywords": [
+    "ng",
+    "ngx",
     "angular",
     "dom",
     "wrappers"
