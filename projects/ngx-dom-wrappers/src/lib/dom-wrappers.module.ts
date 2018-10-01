@@ -23,7 +23,7 @@ export class DomWrappersModule {
    * Prevents module from being imported twice.
    * @param parentModule Another instance of this module.
    */
-  constructor(@Optional() @SkipSelf() parentModule: DomWrappersModule) {
+  constructor(@Optional() @SkipSelf() parentModule?: DomWrappersModule) {
     if (parentModule) {
       throw new Error(
         'DomWrappersModule is already loaded. Import it only in the AppModule or CoreModule.')

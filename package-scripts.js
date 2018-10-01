@@ -19,7 +19,7 @@ module.exports = {
     test: {
       default: 'ng test',
       e2e: 'ng e2e',
-      ci: 'ng test sample -c ci'
+      ci: 'ng test ngx-dom-wrappers -c ci && ng test sample -c ci'
     },
     e2e: {
       default: 'ng e2e',
