@@ -168,11 +168,11 @@
               "devServerTarget": "sample:serve:production"
             },
             "ci": {
-              "protractorConfig": "projects/sample-e2e/protractor.conf.js"
+              "protractorConfig": "projects/sample-e2e/protractor.conf.ci.js"
             },
             "ci-prod": {
               "devServerTarget": "sample:serve:production",
-              "protractorConfig": "projects/sample-e2e/protractor.conf.js"
+              "protractorConfig": "projects/sample-e2e/protractor.conf.ci.js"
             }
           }
         },
