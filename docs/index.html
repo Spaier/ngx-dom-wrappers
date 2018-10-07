@@ -86,22 +86,13 @@ export class CoreModule { }
 </code></pre></div><ol start="2">
 <li>Use wrappers in your code </li>
 </ol>
-<div><pre class="line-numbers"><code class="language-ts">import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from &#39;ngx-dom-wrappers&#39;
-
-constructor(
-    &#64;Inject(WINDOW) windowWrapper?: Window,
-    &#64;Inject(LOCAL_STORAGE) localStorageWrapper?: Storage,
-    &#64;Inject(SESSION_STORAGE) sessionStorageWrapper?: Storage,
-  ) {
-  // Your code
-}</code></pre></div><p>With <code>strictMetadataEmit</code> and no <code>@dynamic</code></p>
 <div><pre class="line-numbers"><code class="language-ts">
 import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from &#39;ngx-dom-wrappers&#39;
 
 constructor(
-    &#64;Inject(WINDOW) windowWrapper?,
-    &#64;Inject(LOCAL_STORAGE) localStorageWrapper?,
-    &#64;Inject(SESSION_STORAGE) sessionStorageWrapper?,
+    &#64;Inject(WINDOW) windowWrapper: any,
+    &#64;Inject(LOCAL_STORAGE) localStorageWrapper: any,
+    &#64;Inject(SESSION_STORAGE) sessionStorageWrapper: any,
   ) {
     const windowObject = windowWrapper as Window
     if (windowObject) {
