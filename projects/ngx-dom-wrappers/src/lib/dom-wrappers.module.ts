@@ -4,8 +4,19 @@ import { SESSION_STORAGE } from './tokens/session-storage.token'
 import { LOCAL_STORAGE } from './tokens/local-storage.token'
 import { WINDOW } from './tokens/window.token'
 
+/**
+ * Returns local storage if it's defined.
+ */
 export function getLocalStorage(): Storage | undefined { return typeof localStorage !== 'undefined' ? localStorage : undefined }
+
+/**
+ * Returns session storage if it's defined.
+ */
 export function getSessionStorage(): Storage | undefined { return typeof sessionStorage !== 'undefined' ? sessionStorage : undefined }
+
+/**
+ * Returns window if it's defined.
+ */
 export function getWindow(): Window | undefined { return typeof window !== 'undefined' ? window : undefined }
 
 /**
