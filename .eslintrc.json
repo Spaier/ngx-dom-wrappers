@@ -1,20 +1,17 @@
 {
   "plugins": [
-    "jasmine",
-    "protractor"
+    "jasmine"
   ],
   "env": {
     "browser": true,
     "es6": true,
     "jasmine": true,
     "node": true,
-    "protractor": true,
     "serviceworker": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:jasmine/recommended",
-    "plugin:protractor/recommended"
+    "plugin:jasmine/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018,
