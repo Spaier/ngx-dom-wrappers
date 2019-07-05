@@ -50,24 +50,29 @@
 <li><a href="#license">License</a></li>
 </ul>
 <h2 id="installation">Installation</h2>
-<div><pre class="line-numbers"><code class="language-bash">npm install ngx-dom-wrappers</code></pre></div><p>or</p>
-<div><pre class="line-numbers"><code class="language-bash">yarn add ngx-dom-wrappers</code></pre></div><h2 id="usage">Usage</h2>
+<p><code>bash
+npm install ngx-dom-wrappers</code></p>
+<p>or</p>
+<p><code>bash
+yarn add ngx-dom-wrappers</code></p>
+<h2 id="usage">Usage</h2>
 <ol>
 <li>Import <code>DomWrappersModule</code> in <code>AppModule</code> or <code>CoreModule</code> of your application.</li>
 </ol>
 <p>AppModule</p>
-<div><pre class="line-numbers"><code class="language-ts">
-&#64;NgModule({
+<p>```ts</p>
+<p>@NgModule({
   imports: [
     // Other imports
     DomWrappersModule
     // Other imports
   ],
 })
-export class AppModule { }
-</code></pre></div><p>CoreModule</p>
-<div><pre class="line-numbers"><code class="language-ts">
-&#64;NgModule({
+export class AppModule { }</p>
+<p>```</p>
+<p>CoreModule</p>
+<p>```ts</p>
+<p>@NgModule({
   imports: [
     // Other imports
     DomWrappersModule
@@ -79,24 +84,25 @@ export class AppModule { }
     // Other exports
   ],
 })
-export class CoreModule { }
-</code></pre></div><ol start="2">
+export class CoreModule { }</p>
+<p>```</p>
+<ol start="2">
 <li>Use wrappers in your code </li>
 </ol>
-<div><pre class="line-numbers"><code class="language-ts">
-import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from &#39;ngx-dom-wrappers&#39;
-
-constructor(
-    &#64;Inject(WINDOW) windowWrapper: any,
-    &#64;Inject(LOCAL_STORAGE) localStorageWrapper: any,
-    &#64;Inject(SESSION_STORAGE) sessionStorageWrapper: any,
+<p>```ts</p>
+<p>import { WINDOW, LOCAL_STORAGE, SESSION_STORAGE } from &#39;ngx-dom-wrappers&#39;</p>
+<p>constructor(
+    @Inject(WINDOW) windowWrapper: any,
+    @Inject(LOCAL_STORAGE) localStorageWrapper: any,
+    @Inject(SESSION_STORAGE) sessionStorageWrapper: any,
   ) {
     const windowObject = windowWrapper as Window
     if (windowObject) {
     // Your code
   }
-}
-</code></pre></div><h2 id="resources">Resources</h2>
+}</p>
+<p>```</p>
+<h2 id="resources">Resources</h2>
 <ul>
 <li>Docs: <a href="https://spaier.github.io/ngx-dom-wrappers">https://spaier.github.io/ngx-dom-wrappers</a></li>
 <li>CoreModule: <a href="https://angular.io/guide/styleguide#core-feature-module">https://angular.io/guide/styleguide#core-feature-module</a></li>
